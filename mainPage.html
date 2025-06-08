@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이유주 자기소개</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      table {
+        border-collapse: collapse;
+        text-align: center;
+      }
+      tr,
+      td {
+        padding: 4px 8px;
+      }
+      li {
+        list-style: none;
+      }
+      thead {
+        background-color: #b9e0fd;
+      }
+      tbody tr:hover {
+        background-color: cornsilk;
+      }
+      .all {
+        justify-content: center;
+        background-color: whitesmoke;
+        height: 100vh;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
+      .behind {
+        box-shadow: 1px 5px 5px gray;
+        padding: 24px;
+        background-color: #b9e0fd;
+        border-radius: 20px;
+      }
+      .front {
+        text-align: center;
+        padding: 32px;
+        border-radius: 20px;
+        background-color: aliceblue;
+      }
+      .hobby {
+        justify-content: center;
+        display: flex;
+      }
+      .hobby-list {
+        text-align: left;
+        margin-left: 4px;
+      }
+      .sign-up {
+        padding: 6px 12px;
+        border-radius: 8px;
+        box-shadow: 1px 2px 2px gray;
+        background-color: #b9e0fd;
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+      }
+      .info {
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        text-align: start;
+        margin: 0px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="all">
+      <div class="behind">
+        <div class="front">
+          <img
+            src="./증명사진_이유주.jpg"
+            width="150"
+            height="200"
+            alt="이유주"
+          />
+          <div class="info">
+            <h3 class="name">이름 : 이유주</h3>
+            <p class="mbti">MBTI : INFJ</p>
+            <div class="hobby">
+              <p>취 미 :</p>
+              <ul class="hobby-list">
+                <li>외국 여행가기</li>
+                <li>드라마 보기</li>
+              </ul>
+            </div>
+            <span
+              >소속 :
+              <a
+                href="https://www.hansung.ac.kr/sites/hansung/index.do"
+                target="_blank"
+              >
+                한성대학교</a
+              ></span
+            >
+          </div>
+          <br />
+          <table border="1">
+            <caption>
+              토요일 학교 시간표
+            </caption>
+            <thead>
+              <tr>
+                <th>수업시간</th>
+                <th>과목명</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>10시~11시</td>
+                <td>대학생활 길라잡이</td>
+              </tr>
+              <tr>
+                <td>11시~12시</td>
+                <td>사고와 표현</td>
+              </tr>
+              <td>12시~13시</td>
+              <td>점심시간</td>
+              <tr>
+                <td>13시~14시</td>
+                <td>데이터 분석 및 예측</td>
+              </tr>
+              <tr>
+                <td>14시~15시</td>
+                <td>인공지능 기초</td>
+              </tr>
+              <tr>
+                <td>15시~16시</td>
+                <td>웹프로그래밍</td>
+              </tr>
+              <tr>
+                <td>16시~17시</td>
+                <td>파이썬 프로그래밍</td>
+              </tr>
+            </tbody>
+          </table>
+          <br />
+          <a href="./join.html" class="sign-up">회원가입</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
