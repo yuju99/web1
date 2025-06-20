@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./global.css" />
+    <style>
+      .all {
+        justify-content: center;
+        background-color: whitesmoke;
+        height: 100vh;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(white, white, white, white, #e3f2fd);
+      }
+
+      .behind {
+        box-shadow: 1px 5px 5px gray;
+        padding: 24px;
+        background-color: #b9e0fd;
+        border-radius: 20px;
+      }
+
+      .front {
+        padding: 32px;
+        width: 404px;
+        border-radius: 20px;
+        background-color: aliceblue;
+      }
+
+      .condition {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        font-size: 16px;
+      }
+
+      .values {
+        text-align: start;
+      }
+
+      .values > label {
+        font-size: 18px;
+        margin-right: 8px;
+      }
+
+      .values span {
+        font-size: 18px;
+        margin-right: 8px;
+      }
+
+      #id {
+        width: 80%;
+        border-radius: 4px;
+        border: none;
+        padding: 6px 8px;
+        box-shadow: 1px 2px 2px gray;
+      }
+
+      #password {
+        width: 100%;
+        border-radius: 4px;
+        border: none;
+        padding: 6px 8px;
+        box-shadow: 1px 2px 2px gray;
+      }
+
+      #email {
+        width: 100%;
+        border-radius: 4px;
+        border: none;
+        padding: 6px 8px;
+        box-shadow: 1px 2px 2px gray;
+      }
+
+      #name {
+        width: 100%;
+        border-radius: 4px;
+        border: none;
+        padding: 6px 8px;
+        box-shadow: 1px 2px 2px gray;
+      }
+
+      #birthday {
+        width: 100%;
+        border-radius: 4px;
+        border: none;
+        padding: 6px 8px;
+      }
+
+      #age {
+        width: 100%;
+        border-radius: 4px;
+        border: none;
+        padding: 6px 8px;
+        box-shadow: 1px 2px 2px gray;
+      }
+
+      #mobile {
+        width: 100%;
+        border-radius: 4px;
+        border: none;
+        padding: 6px 8px;
+        box-shadow: 1px 2px 2px gray;
+      }
+
+      #gender {
+        width: 100%;
+        border-radius: 4px;
+        border: none;
+        padding: 6px 8px;
+      }
+
+      #tel {
+        width: 100%;
+        border-radius: 4px;
+        border: none;
+        padding: 6px 8px;
+        box-shadow: 1px 2px 2px gray;
+      }
+
+      .submit {
+        width: 32%;
+        height: 28px;
+        border-radius: 8px;
+        border: none;
+        font-weight: bold;
+        font-size: 17px;
+        margin-right: 4px;
+        box-shadow: 1px 2px 2px gray;
+      }
+
+      .reset {
+        width: 32%;
+        height: 28px;
+        border-radius: 4px;
+        border: none;
+        border: 1px solid black;
+      }
+
+      .main {
+        border-radius: 4px;
+        padding: 2px 4px;
+        width: 32%;
+        text-align: center;
+        background-color: #f0f0f0;
+        text-decoration: none;
+        color: black;
+        border: 1px solid black;
+      }
+
+      .form-bottom {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        margin-top: 32px;
+      }
+
+      .explain {
+        font-size: 10px;
+        color: gray;
+      }
+
+      .checked {
+        background-color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <ul class="atag-list">
+        <li><a href="./school.html">HOME</a></li>
+        <li><a href="./main.html">자기소개</a></li>
+        <li><a href="./join.html">회원가입</a></li>
+        <li class="current-page"><a href="#">회원정보</a></li>
+        <li><a href="./event.html">이벤트 목록</a></li>
+      </ul>
+    </nav>
+    <div class="all">
+      <div class="behind">
+        <div class="front">
+          <form action="#" class="values">
+            <label for="id">아이디</label><span id="id"></span> <br /><br />
+            <label for="password">비밀번호</label><span id="password"></span>
+            <br /><br />
+            <label for="email">이메일</label><span id="email"></span>
+            <br /><br />
+            <label for="name">이름</label><span id="name"></span> <br /><br />
+            <label for="birthday">생년월일</label><span id="birthday"></span>
+            <br /><br />
+            <label for="age">나이</label><span id="age"></span> <br /><br />
+            <span for="id">성별</span><span id="gender"></span> <br /><br />
+            <span for="birthday">통신사</span><span id="mobile"></span>
+            <br />
+            <br />
+            <label for="tel">전화번호</label><span id="tel"></span> <br /><br />
+
+            <p class="explain">
+              아이디, 비밀번호, 이메일, 이름, 나이, 통신사, 전화번호 칸을 double
+              click해보세요
+            </p>
+
+            <div class="form-bottom">
+              <input type="reset" title="초기화" class="reset" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      const localId = window.localStorage.getItem("ID");
+      const localPw = window.localStorage.getItem("PASSWORD");
+      const localEmail = window.localStorage.getItem("EMAIL");
+      const localName = window.localStorage.getItem("NAME");
+      const localBirthday = window.localStorage.getItem("BIRTHDAY");
+      const localGender = window.localStorage.getItem("GENDER");
+      const localMobile = window.localStorage.getItem("MOBILE");
+      const localTel = window.localStorage.getItem("TEL");
+
+      let date = new Date();
+      let year = date.getFullYear();
+      let myYear = localBirthday.split("-")[0];
+
+      document.getElementById("id").textContent = localId;
+      document.getElementById("password").textContent = localPw;
+      document.getElementById("email").textContent = localEmail;
+      document.getElementById("name").textContent = localName;
+      document.getElementById("birthday").textContent = localBirthday;
+      document.getElementById("age").textContent = year - myYear;
+      document.getElementById("gender").textContent = localGender;
+      document.getElementById("mobile").textContent = localMobile;
+      document.getElementById("tel").textContent = localTel;
+
+      const values = [
+        "id",
+        "password",
+        "email",
+        "name",
+        "birthday",
+        "age",
+        "gender",
+        "mobile",
+        "tel",
+      ];
+
+      values.forEach((id) => {
+        const el = document.querySelector("#" + id);
+        el.addEventListener("dblclick", (event) => {
+          const value = prompt("", event.target.textContent);
+          const name = event.target.id.toUpperCase();
+
+          if (name != "BIRTHDAY" && name != "GENDER") {
+            window.localStorage.setItem(name, value);
+          }
+
+          location.reload(true);
+        });
+
+        el.setAttribute("tabindex", "0");
+        el.onfocus = () => el.classList.add("checked");
+        el.onblur = () => el.classList.remove("checked");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./global.css" />
+    <style>
+      .all {
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(white, white, white, white, #e3f2fd);
+      }
+
+      .behind {
+        box-shadow: 1px 5px 5px gray;
+        padding: 24px;
+        background-color: #b9e0fd;
+        border-radius: 20px;
+        width: 500px;
+      }
+
+      .front {
+        padding: 32px;
+        border-radius: 20px;
+        background-color: aliceblue;
+      }
+
+      .event {
+        font-size: 24px;
+        margin-bottom: 12px;
+      }
+
+      .event-explain {
+        margin-bottom: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <ul class="atag-list">
+        <li><a href="./school.html">HOME</a></li>
+        <li><a href="./main.html">자기소개</a></li>
+        <li><a href="./join.html">회원가입</a></li>
+        <li class="user"><a href="./account.html">회원정보</a></li>
+        <li class="current-page"><a href="#">이벤트 목록</a></li>
+      </ul>
+    </nav>
+    <div class="all">
+      <div class="behind">
+        <div class="front">
+          <p class="event">submit</p>
+          <p class="event-explain">회원가입 페이지 form에서 제출될 때 실행</p>
+          <hr />
+          <p class="event">click</p>
+          <p class="event-explain">
+            회원가입 페이지에서 id를 중복체크할 때 실행
+          </p>
+          <hr />
+          <p class="event">reset</p>
+          <p class="event-explain">
+            회원가입 페이지 form 내에 값을 초기화 할 때 실행
+          </p>
+          <hr />
+          <p class="event">change</p>
+          <p class="event-explain">
+            회원가입 페이지에서 통신사 선택을 위한 select에서 실행
+          </p>
+          <hr />
+          <p class="event">dblclick</p>
+          <p class="event-explain">
+            회원정보 페이지에서 계정 정보를 변경할 때 실행
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const user = document.querySelector(".user");
+
+      user.addEventListener("click", (event) => {
+        const localId = window.localStorage.getItem("ID") || "";
+
+        if (localId == "") {
+          event.preventDefault();
+          alert("회원가입을 해주세요.");
+        }
+      });
+    </script>
+  </body>
+</html>

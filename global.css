@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.current-page {
+  background-color: skyblue;
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 56px;
+  background-color: #b9e0fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.atag-list {
+  display: flex;
+  gap: 24px;
+}
+
+.atag-list > li {
+  list-style: none;
+  padding: 4px 8px;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+.atag-list > li:hover {
+  background-color: skyblue;
+}
+
+.atag-list a {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}

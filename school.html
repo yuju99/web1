@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./global.css" />
+    <style>
+      .container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(white, white, white, white, #e3f2fd);
+      }
+
+      .message {
+        font-size: 7rem;
+        font-weight: bold;
+      }
+
+      .school {
+        display: flex;
+        gap: 24px;
+        margin-bottom: 120px;
+      }
+
+      .school > a {
+        width: 200px;
+        height: 200px;
+        background-color: #b9e0fd;
+        border-radius: 50%;
+        font-weight: bold;
+        font-size: 24px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: 1s;
+        background: linear-gradient(45deg, white, skyblue);
+      }
+
+      .school > a:hover {
+        transform: scale(1.15);
+        background: linear-gradient(225deg, white, skyblue);
+      }
+
+      .name {
+        font-size: 32px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <ul class="atag-list">
+        <li class="current-page"><a href="#">HOME</a></li>
+        <li><a href="./main.html">자기소개</a></li>
+        <li><a href="./join.html">회원가입</a></li>
+        <li class="user"><a href="./account.html">회원정보</a></li>
+        <li><a href="./event.html">이벤트 목록</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <p class="message">Welcome!</p>
+      <p class="name">2506015 이유주</p>
+      <br />
+      <div class="school">
+        <a
+          href="https://www.hansung.ac.kr/sites/hansung/index.do"
+          target="_blank"
+        >
+          한성대학교</a
+        >
+        <a href=" https://futureplus.hansung.ac.kr/" target="_blank"
+          >미래플러스대학</a
+        >
+        <a
+          href="https://futureplus.hansung.ac.kr/ko/department/future"
+          target="_blank"
+          >미래인재학부</a
+        >
+      </div>
+    </div>
+
+    <script>
+      const user = document.querySelector(".user");
+
+      user.addEventListener("click", (event) => {
+        const localId = window.localStorage.getItem("ID") || "";
+
+        if (localId == "") {
+          event.preventDefault();
+          alert("회원가입을 해주세요.");
+        }
+      });
+    </script>
+  </body>
+</html>
